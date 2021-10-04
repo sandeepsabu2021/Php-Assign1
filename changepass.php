@@ -48,7 +48,7 @@
             $dest = 'users/' . $mail;
             $fo = fopen($dest . "/details.txt", "w");
             $newpass = substr(sha1($npass),0,12);
-            echo fwrite($fo, "$newpass\n$name\n$age\n$gen\n$pic\n$mail");
+            fwrite($fo, "$newpass\n$name\n$age\n$gen\n$pic\n$mail");
             fclose($fo);
             setcookie("email","");
             setcookie("password","");

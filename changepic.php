@@ -27,7 +27,7 @@ if (isset($_POST['cpic'])) {
         if (move_uploaded_file($tmp, $img_source)) {
             $newpic_error =  "File uploaded";
             $fo = fopen($dest . "/details.txt", "w");
-            echo fwrite($fo, "$pass\n$name\n$age\n$gen\n$img_source\n$mail");
+            fwrite($fo, "$pass\n$name\n$age\n$gen\n$img_source\n$mail");
             fclose($fo);
             $output = "Profile picture changed successfully";
         } else {
