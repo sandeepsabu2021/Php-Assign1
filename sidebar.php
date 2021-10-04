@@ -1,8 +1,3 @@
-<script>
-    function newimg(){
-        window.open('changepic.php','popup','width=350, height=300 ,scrollbars=no, resizable=no');
-    }
-</script>
 <table class="table table-striped text-center table-bordered mt-4">
     <thead class="bg-info text-white">
         <tr>
@@ -12,7 +7,7 @@
     <tbody>
         <tr>
             <td colspan="2"><?php echo "<img class='user_pic' src='$pic' height='150px' width='150px'><br/>"; ?>
-            <a href="changepic.php" onclick="newimg()" target="popup">Change Picture</a>
+            <a href="?page=changepic">Change Picture</a>
         </td>
         </tr>
         <tr>

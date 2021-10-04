@@ -3,7 +3,6 @@ $newpic_error = $output = "";
 if (isset($_POST['cpic'])) {
     $tmp = $_FILES['newpic']['tmp_name'];
     $newpic = $_FILES['newpic']['name'];
-    session_start();
     $pass = $_SESSION['password'];
     $name = $_SESSION['name'];
     $age = $_SESSION['age'];
@@ -31,7 +30,6 @@ if (isset($_POST['cpic'])) {
             echo fwrite($fo, "$pass\n$name\n$age\n$gen\n$img_source\n$mail");
             fclose($fo);
             $output = "Profile picture changed successfully";
-            session_destroy();
         } else {
             $newpic_error = "Error";
         }
@@ -47,8 +45,8 @@ if (isset($_POST['cpic'])) {
 </head>
 
 <body>
-    <h2 class="text-center my-3">Change Profile Picture</h2>
-    <form class="text-center my-3" method="POST" enctype="multipart/form-data">
+    <h4>Change Profile Picture</h4><hr/>
+    <form class="my-3" method="POST" enctype="multipart/form-data">
         <h5 style="color: green;"><?php echo "$output"; ?></h5>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Select New Profile Picture:</label>

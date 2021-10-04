@@ -64,6 +64,10 @@ $_SESSION['mail'] = $mail;
                     include("changepass.php");
                     break;
 
+                case 'changepic':
+                    include("changepic.php");
+                    break;
+
                 default:
                     include("home.php");
                     break;
@@ -72,7 +76,7 @@ $_SESSION['mail'] = $mail;
 
         </aside>
     </div>
-    
+
     <?php include "footer.php"; ?>
     <?php include "foot.php"; ?>
 </body>

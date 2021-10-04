@@ -86,12 +86,6 @@
         </div>
         <br />
         <input type="submit" class="btn btn-primary btn-large" name="cpass" value="Change Password">
-        <?php
-            if($output == "Password changed successfully!!!"){        
-        ?>
-            <a>Go back to dashboard</a>
-        <?php
-            }
-        ?>
+
     </form>
 </div>
